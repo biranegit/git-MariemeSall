@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices</title>
+</head>
+<body>
+    <!-- 5a -->
+    <script>
+        var nom = 'VotreNom';
+    </script>
+
+    <!-- 5b -->
+    <script>
+        console.log("Je m'appelle : " + nom);
+    </script>
+
+    <!-- 5c -->
+    <script>
+        var cafe = 1;
+        var baguettes = 2;
+        var soupe = 1;
+        var cout = (cafe * 5) + (baguettes * 3) + (soupe * 9);
+    </script>
+
+    <!-- 5d -->
+    <script>
+        console.log("Coût de la commande : $" + cout);
+    </script>
+
+    <!-- 5e -->
+    <script>
+        var tax = cout * 0.1;
+    </script>
+
+    <!-- 5f -->
+    <script>
+        console.log("Taxe (10%) : " + tax);
+    </script>
+
+    <!-- 5g -->
+    <script>
+        var totalCout = cout + tax;
+        console.log("Coût Total : $" + totalCout);
+    </script>
+
+    <!-- 5h -->
+    <script>
+        function augmenterQuantite(quantite) {
+            var panier = document.getElementById('panier');
+            panier.value += quantite;
+        }
+    </script>
+
+    <!-- 5i -->
+    <script>
+        function diminuerQuantite() {
+            var panier = document.getElementById('panier');
+            panier.value--;
+        }
+    </script>
+
+    <!-- 5j -->
+    <script>
+        function diminuerQuantite(quantite) {
+            var panier = document.getElementById('panier');
+            panier.value -= quantite;
+        }
+    </script>
+
+    <!-- Challenge: Calculatrice -->
+    <h2>Calculatrice</h2>
+    <p>
+        <button onclick="ajouterChiffre('1')">1</button>
+        <button onclick="ajouterChiffre('2')">2</button>
+        <button onclick="ajouterChiffre('3')">3</button>
+        <button onclick="ajouterOperateur('+')">+</button>
+        <button onclick="calculer()">=</button>
+    </p>
+    <p>
+        <button onclick="ajouterChiffre('4')">4</button>
+        <button onclick="ajouterChiffre('5')">5</button>
+    </p>
+
+    <script>
+        var calcul = '';
+
+        function ajouterChiffre(chiffre) {
+            calcul += chiffre;
+            console.log(calcul);
+        }
+
+        function ajouterOperateur(operateur) {
+            calcul += ' ' + operateur + ' ';
+            console.log(calcul);
+        }
+
+        function calculer() {
+            calcul = eval(calcul);
+            console.log(calcul);
+        }
+    </script>
+</body>
+</html>
